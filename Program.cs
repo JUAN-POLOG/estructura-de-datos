@@ -5,23 +5,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp4
+namespace productos
 {
-    class program
+    class Program
     {
-
         static void Main()
         {
-            string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos juan polo\\NotasEstudiantes.csv";
+            string ruta = "C:\\Users\\SALA-1.UNICARIBE\\Desktop\\estructura de datos juan polo\\Productos.csv";
+
             using (StreamWriter sw = new StreamWriter(ruta))
             {
-                sw.WriteLine("nombre,edad,nota");
-                sw.WriteLine("Juan, 22, 4.5");
-                sw.WriteLine("David, 20, 3.0");
-                sw.WriteLine("Alvaro, 19, 5.0");
-
+                sw.WriteLine("ID,Nombre,Precio");
+                sw.WriteLine("1,portatil,4500");
+                sw.WriteLine("2,MouseInalambrico,15");
+                sw.WriteLine("3,monitor,500");
             }
-            Console.WriteLine("archivo creado exitosamente");
+
+            string[] lineas = File.ReadAllLines(ruta);
+
+            for (int i = 1; i < lineas.Length; i++)
+            {
+                string[] campos = lineas[i].Split(',');
+                double precio = double.Parse(campos[2]);
+
+                if (precio > 100)
+                {
+                    Console.WriteLine($"{campos[1]} - ${precio}");
+                }
+            }
         }
     }
+
 }
