@@ -15,7 +15,7 @@ namespace RegistrosInciedncia
     internal class Program
     {
 
-        static string pathARCHIVO = "imcidencias.txt";
+        static string pathARCHIVO = "incidencias.txt";
 
         static void GuardarIncidencias(List<string[]> Incidencias)
         {
