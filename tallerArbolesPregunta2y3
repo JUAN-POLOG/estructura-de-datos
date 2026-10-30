@@ -1,0 +1,47 @@
+Ejercicio 2. Aplicación y análisis
+
+Enunciado: Obtener los recorridos Preorden, Inorden y Posorden del árbol del ejercicio 1.
+
+Solución:
+
+1.Preorden (Raíz – Izquierda – Derecha)
+
+Primero se visita la raíz, después el lado izquierdo y finalmente el derecho.
+
+Resultado:
+
+45, 23, 12, 34, 67, 56, 89
+
+2. Inorden (Izquierda – Raíz – Derecha)
+
+Primero se visita el lado izquierdo, después la raíz y finalmente el lado derecho.
+
+Resultado:
+
+12, 23, 34, 45, 56, 67, 89
+
+3. Posorden (Izquierda – Derecha – Raíz)
+
+Primero se visita el lado izquierdo, después el derecho y al final la raíz.
+
+Resultado:
+
+12, 34, 23, 56, 89, 67, 45
+
+Ejercicio 3. Análisis de algoritmos
+
+Enunciado: Demostrar por qué el recorrido Inorden de un Árbol Binario de Búsqueda siempre produce una secuencia ordenada de forma estrictamente ascendente.
+
+Solución:
+
+El recorrido Inorden produce una secuencia ordenada porque en un Árbol Binario de Búsqueda los números menores se encuentran en el lado izquierdo y los números mayores en el lado derecho.
+
+Cuando hacemos el recorrido Inorden, primero visitamos todos los números de la izquierda, después la raíz y finalmente los números de la derecha.
+
+Por esta razón, los números van apareciendo desde el menor hasta el mayor.
+
+Ejemplo:
+
+Si tenemos los números 45, 23, 67, 12, 34, 56 y 89, el recorrido Inorden sería:
+
+12, 23, 34, 45, 56, 67, 89
